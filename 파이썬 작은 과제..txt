@@ -1,0 +1,46 @@
+import random
+
+while True :
+    print('------주사위 게임--------')
+    print('-------시작 s ----------')
+    print('-------종료 e-----------\n\n\n')
+
+    start = input('시작키는 s 종료키는 e 입니다.')
+    if start == 's' or start == 'S':
+      print('#주사위게임')
+      print('시작!')
+
+      a = input('이름을 입력해주세요.')
+      b = input('이름을 입력해주세요.')
+
+      dice_1 = random.randint(1, 6)
+      dice_2 = random.randint(1, 6)
+      dice_3 = random.randint(1, 6)
+      dice_4 = random.randint(1, 6)
+
+      print(f'{a}의 첫번째 주사위는 {dice_1}입니다')
+      print(f'{a}의 두번째 주사위는 {dice_2}입니다')
+      dice_a = dice_1 + dice_2
+      print(f'두 주사위의 값을 더한 값입니다.{dice_a}')
+
+      print(f'{b}의 첫번째 주사위는 {dice_3}입니다')
+      print(f'{b}의 두번째 주사위는 {dice_4}입니다')
+      dice_b = dice_3 + dice_4
+      print(f'두 주사위의 값을 더한 값입니다.{dice_b}')
+
+      if dice_a >0 :
+        if dice_a > dice_b:
+            print(f'{a}님이 {dice_a - dice_b} 차이로 이겼습니다')
+            
+            
+        elif dice_b > dice_a:
+            print(f'{b}님이 {dice_a - dice_b} 차이로 이겼습니다')
+            
+
+        else:
+          print('무승부 입니다.')
+          
+          
+    elif start == 'e' or start == 'E':
+      print('종료되었습니다.')
+      break
