@@ -5,23 +5,23 @@ while True :
     print('-------시작 s ----------')
     print('-------종료 e-----------\n\n\n')
 
-    start = input('시작키는 s 종료키는 e 입니다.')
-    if start == 's' or start == 'S':
+    start = input('시작키는 s 종료키는 e 입니다.') 
+    if start == 's' or start == 'S': //스타트 하는 키
       print('#주사위게임')
       print('시작!')
 
-      a = input('이름을 입력해주세요.')
+      a = input('이름을 입력해주세요.') //플레이어의 이름을 입력받는다.
       b = input('이름을 입력해주세요.')
 
-      dice_1 = random.randint(1, 6)
+      dice_1 = random.randint(1, 6) //각 플레이어의 1~6의 랜덤값을 입력받기
       dice_2 = random.randint(1, 6)
       dice_3 = random.randint(1, 6)
       dice_4 = random.randint(1, 6)
 
-      print(f'{a}의 첫번째 주사위는 {dice_1}입니다')
+      print(f'{a}의 첫번째 주사위는 {dice_1}입니다') //초기 랜덤값 알려주기
       print(f'{a}의 두번째 주사위는 {dice_2}입니다')
-      dice_a = dice_1 + dice_2
-      print(f'두 주사위의 값을 더한 값입니다.{dice_a}')
+      dice_a = dice_1 + dice_2 // 두 값을 더한뒤 새로운 변수 선언뒤 더해준값을 저장해 준다.
+      print(f'두 주사위의 값을 더한 값입니다.{dice_a}') // 출력
 
       print(f'{b}의 첫번째 주사위는 {dice_3}입니다')
       print(f'{b}의 두번째 주사위는 {dice_4}입니다')
@@ -29,18 +29,18 @@ while True :
       print(f'두 주사위의 값을 더한 값입니다.{dice_b}')
 
       if dice_a >0 :
-        if dice_a > dice_b:
+        if dice_a > dice_b: // dice_a값이 dice_b 보다 크다면 서로의 값을 뺴준뒤 몇 차이로 무슨 플레이어가 이겼는지 알려준다
             print(f'{a}님이 {dice_a - dice_b} 차이로 이겼습니다')
             
             
-        elif dice_b > dice_a:
+        elif dice_b > dice_a: // dice_b 값이 dice_a 보다 크다면 서로의 값을 뺴준뒤 몇 차이로 무슨 플레이어가 이겼는지 알려준다
             print(f'{b}님이 {dice_a - dice_b} 차이로 이겼습니다')
             
 
         else:
-          print('무승부 입니다.')
+          print('무승부 입니다.') 값이 같을 경우는 무승부를 띄운다
           
           
-    elif start == 'e' or start == 'E':
+    elif start == 'e' or start == 'E': //종료시키는 키
       print('종료되었습니다.')
       break
