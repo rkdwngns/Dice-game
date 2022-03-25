@@ -1,6 +1,6 @@
 # Dice-game
 
-#### 파이썬으로 만든 간단한 주사위 게임이다 
+# 1.파이썬으로 만든 간단한 주사위 게임 
 #### s와 e로 게임의 시작 및 종료 할 수 있다.
 
 ![dmddo](https://user-images.githubusercontent.com/93520535/154393431-4539bcac-55fb-4817-a031-4b620f4b9dee.png)
